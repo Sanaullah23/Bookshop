@@ -1,11 +1,12 @@
 import React from 'react'
 import {AiOutlineMail} from 'react-icons/ai'
+import book from '../assets/images/book.jpg'
 
 const Hero = () => {
   return (
     <>
       <div className='px-10 md:px-12 flex flex-col   md:flex-row'>
-        <div className='md:w-1/2 mt-10 md:mt-28'>
+        <div className='order-2 md:order-1 md:w-1/2 mt-10 md:mt-28 '>
             <div className='space-y-10'>
             <h1 className='text-4xl font-bold'>Hello, welcome here to learn something 
             <span className='pl-2 text-pink-500'>new everday !!!</span></h1>
@@ -24,7 +25,9 @@ const Hero = () => {
            
             
         </div>
-        <div className='md:w-1/2'>right</div>
+        <div className='roder-1 md:w-1/2 md:order-2'>
+            <img src={book} alt="book"  className=' md:w-3/4 mx-auto mt-8 '/>
+        </div>
       </div>
     </>
   )
