@@ -1,0 +1,59 @@
+[
+    {
+        "id":1,
+        "Name":"Story Book",
+        "Description":"amazing store book for kids to enjoy the world of stories",
+        "price":0,
+        "Category":"free"
+    },
+    {
+        "id":2,
+        "Name":"Food Book",
+        "Description":"amazing store book for kids to enjoy the world of stories",
+        "price":200,
+        "Category":"food"
+    },
+    {
+        "id":3,
+        "Name":"Songs Book",
+        "Description":"amazing store book for kids to enjoy the world of stories",
+        "price":250,
+        "Category":"music"
+    },
+
+    {
+        "id":4,
+        "Name":"story Book",
+        "Description":"amazing store book for kids to enjoy the world of stories",
+        "price":0,
+        "Category":"free"
+    },
+    {
+        "id":5,
+        "Name":"Travil Book",
+        "Description":"amazing store book for kids to enjoy the world of stories",
+        "price":98,
+        "Category":"tourism"
+    },
+    {
+        "id":6,
+        "Name":"story Book",
+        "Description":"amazing store book for kids to enjoy the world of stories",
+        "price":180,
+        "Category":"stroy"
+    },
+    {
+        "id":7,
+        "Name":"story Book",
+        "Description":"amazing store book for kids to enjoy the world of stories",
+        "price":0,
+        "Category":"free"
+    },
+    {
+        "id":8,
+        "Name":"Action Book",
+        "Description":"amazing store book for kids to enjoy the world of stories",
+        "price":50,
+        "Category":"entertainment"
+    }
+]

@@ -1,5 +1,5 @@
 import React from 'react'
-import { AiFillFacebook, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
+import { AiFillFacebook, AiFillLinkedin, AiFillYoutube, AiOutlineCopyright } from 'react-icons/ai';
 
 const Footer = () => {
     const menuItems = [
@@ -28,7 +28,8 @@ const Footer = () => {
                <AiFillYoutube/>
             </div>
             <div >
-                <h5>All rights reserved @Bakhsh-Tech.com</h5>
+                
+                <h5>  All rights reserved @Bakhsh-Tech.com</h5>
             </div>
         </footer>
       </div>

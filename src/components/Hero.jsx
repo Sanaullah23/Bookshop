@@ -5,7 +5,7 @@ import book from '../assets/images/book.jpg'
 const Hero = () => {
   return (
     <>
-      <div className='px-10 md:px-12 flex flex-col   md:flex-row'>
+      <div className='mt-8 px-10 md:px-12 flex flex-col   md:flex-row'>
         <div className='order-2 md:order-1 md:w-1/2 mt-10 md:mt-28 '>
             <div className='space-y-10'>
             <h1 className='text-4xl font-bold'>Hello, welcome here to learn something 
@@ -18,7 +18,7 @@ const Hero = () => {
             <div className='  px-3 py-2 flex gap-3 items-center border-[1px] border-gray-400 rounded-md'>
                 <AiOutlineMail/>
             <input type="text" placeholder='Enter your email to login'  className='
-             focus:outline-none '/>
+             w-full focus:outline-none '/>
             </div>
             </div>
             <button className='btn mt-6 btn-secondary'>Secondary</button>
