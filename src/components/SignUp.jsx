@@ -1,18 +1,36 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Login from './Login'
-
+import axios from 'axios'
 const SignUp = () => {
   const [name, setName]= useState('')
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('')
-
-  const handleSubmit=(e)=>{
+  const navigate = useNavigate()
+  const handleSubmit= async(e)=>{
     e.preventDefault();
-    console.log(name, email, password)
+    const userInfo={
+      fullname:name,
+      email:email,
+      password:password
+     }
+     await axios.post('http://localhost:5000/api/v1/user/signup', userInfo)
+     .then((res)=>{
+      if (res.data) {
+        alert('Registered Successfully')
+
+      }
+     })
+     .catch((error)=>{
+      if (error.response) {
+        alert(error.response.data.message)
+      }
+     })
      setName('')
      setEmail('')
      setPassword('')
+    navigate('/')
+
   }
 
   return (
@@ -31,17 +49,17 @@ const SignUp = () => {
           <div className='py-4'>
           <div className='mt-4 space-y-2'>
            <label htmlFor="">Full Name</label> <br />
-           <input type="text" placeholder='Enter full-name' value={name} className='px-2 py-1' 
+           <input type="text" placeholder='Enter full-name' name='fullname' value={name} className='px-2 py-1' 
             onChange={(e)=>setName(e.target.value)}/>
            </div>
             <div className='mt-4 space-y-2'>
            <label htmlFor="">Email</label> <br />
-           <input type="email" placeholder='Enter email' value={email} className='px-2 py-1'
+           <input type="email" placeholder='Enter email'  name='email' value={email} className='px-2 py-1'
             onChange={(e)=>setEmail(e.target.value)} />
            </div>
             <div className='mt-4 space-y-2'>
            <label htmlFor="">Password</label> <br />
-           <input type="password" placeholder='Enter password' value={password} className='px-2 py-1'
+           <input type="password" placeholder='Enter password' name='password' value={password} className='px-2 py-1'
             onChange={(e)=>setPassword(e.target.value)}
            />
            </div>

@@ -2,38 +2,37 @@ import React from "react";
 import bookimage from "../assets/images/book.jpg";
 import axios from "axios";
 import { useEffect, useState } from "react";
+
 const Course = () => {
   const [book, setBook] = useState([]);
 
   useEffect(() => {
     const getbook = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/v1/books');
-        console.log(res)
-        if(res.status === 200){
+        const res = await axios.get("http://localhost:5000/api/v1/books");
+        console.log(res);
+        if (res.status === 200) {
           const books = res.data;
-          setBook(books)
+          setBook(books.data);
           // setBook(Array.isArray(books)?books:[])
           // console.log(books)
-          
-        
         }
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
     };
     getbook();
   }, []);
-  
- console.log(book)
- 
+
+  console.log(book);
+
   return (
     <>
-      {book.map((book) => {
+      {book?.map((book) => {
         return (
-        
-         <div className="hover:scale-105 duration-300">
+          <div className="hover:scale-105 duration-300">
             <div>
+              <img src={bookimage} alt="" />
             </div>
             <div className="px-4">
               <h1 className="text-xl font-semibold">{book.Name}</h1>
@@ -52,11 +51,10 @@ const Course = () => {
               </button>
             </div>
           </div>
-       
         );
       })}
     </>
   );
 };
 
-export default Course;
+export default Course;
