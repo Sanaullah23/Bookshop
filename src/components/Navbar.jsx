@@ -2,10 +2,14 @@ import React, { useEffect, useState } from "react";
 import { FcMenu } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import Login from "./Login";
+import {useAuth} from '../context/AuthProvider'
+import Logout from "./Logout";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [sticky, setSticky]=useState(false)
+  const [authUser, setAuthUser]= useAuth()
+  console.log(authUser)
   const menuItems = [
     { name: "Home", link: "/" },
     { name: "Courses", link: "/Courses" },
@@ -28,7 +32,7 @@ const Navbar = () => {
             <div className="hidden md:block">
               <ul className={`flex justify-between items-center gap-5 `}>
                 {menuItems.map((item, index) => {
-                  return <Link to={item.link}><li key={index} className="text-[16px]"> {item.name}</li></Link>
+                  return <Link to={item.link}  key={index}><li  className="text-[16px]"> {item.name}</li></Link>
                 })}
               </ul>
             </div>
@@ -47,9 +51,13 @@ const Navbar = () => {
               placeholder="search"
               className="hidden md:block lg:block  px-6 py-2 border-[1px] rounded-md focus:outline-none"
             />
-            <button className="bg-black text-white px-4 py-[6px] rounded-md order-1" onClick={()=>document.getElementById('my_modal_3').showModal()}>login
+            {
+              authUser ?( <Logout/>) :
+              (<button className="bg-black text-white px-4 py-[6px] rounded-md order-1" onClick={()=>document.getElementById('my_modal_3').showModal()}>login
              <Login/>
-            </button>
+            </button>) 
+            }
+          
             
           </div>
         </nav>

@@ -29,7 +29,10 @@ const SignUp = () => {
      setName('')
      setEmail('')
      setPassword('')
-    navigate('/')
+     
+    //  setTimeout(()=>{
+    //   navigate('/')
+    //  }, 5000)
 
   }
 
@@ -48,17 +51,17 @@ const SignUp = () => {
            <h3 className='font-bold text-lg '>Sign Up</h3>
           <div className='py-4'>
           <div className='mt-4 space-y-2'>
-           <label htmlFor="">Full Name</label> <br />
+           <label >Full Name</label> <br />
            <input type="text" placeholder='Enter full-name' name='fullname' value={name} className='px-2 py-1' 
             onChange={(e)=>setName(e.target.value)}/>
            </div>
             <div className='mt-4 space-y-2'>
-           <label htmlFor="">Email</label> <br />
+           <label>Email</label> <br />
            <input type="email" placeholder='Enter email'  name='email' value={email} className='px-2 py-1'
             onChange={(e)=>setEmail(e.target.value)} />
            </div>
             <div className='mt-4 space-y-2'>
-           <label htmlFor="">Password</label> <br />
+           <label >Password</label> <br />
            <input type="password" placeholder='Enter password' name='password' value={password} className='px-2 py-1'
             onChange={(e)=>setPassword(e.target.value)}
            />

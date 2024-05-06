@@ -11,12 +11,12 @@ const Freebook = () => {
     </div>
       <div className='flex  items-center py-2 pl-12 overflow-auto'>
       {
-         freebooklist.map((freebook)=>{
+         freebooklist.map((freebook, index)=>{
           
          
             return(
-              <div className=''>
-                  <Cards  freebooks={freebook} key={freebook.id}/>
+              <div className='' key={index}>
+                  <Cards  freebooks={freebook} />
                </div>
             )
           
