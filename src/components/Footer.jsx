@@ -1,5 +1,5 @@
 import React from 'react'
-import { AiFillFacebook, AiFillLinkedin, AiFillYoutube, AiOutlineCopyright } from 'react-icons/ai';
+import { AiFillFacebook, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
 
 const Footer = () => {
     const menuItems = [

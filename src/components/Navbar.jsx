@@ -8,7 +8,7 @@ import Logout from "./Logout";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [sticky, setSticky]=useState(false)
-  const [authUser, setAuthUser]= useAuth()
+  const [authUser]= useAuth()
   console.log(authUser)
   const menuItems = [
     { name: "Home", link: "/" },

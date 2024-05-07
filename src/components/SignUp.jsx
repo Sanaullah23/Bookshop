@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Login from './Login'
 import axios from 'axios'
 const SignUp = () => {
   const [name, setName]= useState('')
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('')
-  const navigate = useNavigate()
+
   const handleSubmit= async(e)=>{
     e.preventDefault();
     const userInfo={

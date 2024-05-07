@@ -6,10 +6,10 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import SignUp from './components/SignUp'
 import { useAuth } from './context/AuthProvider'
-import Login from './components/Login'
+
 
 function App() {
-  const [authUser, setAuthUser]= useAuth()
+  const [authUser]= useAuth()
 
 
   return (
